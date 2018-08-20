@@ -1,0 +1,421 @@
+{
+  "title": "About PlantUML Plugin",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "bb8e2bb4439259bb",
+      "text": "The PlantUML plugin renders a PlantUML description using a server of your choice.  An optional caption is added after the UML.  This plugin saves the image and tries not to call the server, if the source has not changed."
+    },
+    {
+      "type": "paragraph",
+      "id": "1385c19a89da9823",
+      "text": "Read more about PlantUML at [http://plantuml.com/ plantuml.com]."
+    },
+    {
+      "type": "paragraph",
+      "id": "e4f952576c5a1cc3",
+      "text": "See [http://github.com Github] for plugin source."
+    },
+    {
+      "type": "plantuml",
+      "id": "81341aefab81d046",
+      "text": "'CAPTION Simple example\n@startuml\nclass Plugin\n\nclass PlantUMLPlugin\n\nPlugin <|-- PlantUMLPlugin\n@enduml"
+    },
+    {
+      "type": "html",
+      "id": "10a82c2bd49114e0",
+      "text": "<h3>Plugin notation</h3>"
+    },
+    {
+      "type": "markdown",
+      "id": "77a4e756cde6b853",
+      "text": "This plugin uses the same notation as PlantUML does with two exceptions.  Before the mandatory `@startuml` tag can be lines of comments that guide the plugin."
+    },
+    {
+      "type": "markdown",
+      "id": "6dab13a9dbbc974d",
+      "text": "If the line starts with `'HOST` followed by a space and a URI that is used as the address and prefix of the PlantUML server.  The encoded version of the PlantUML source is concatenated to this URI, and the concatenation has to be a valid URI for the PlantUML server.  This defaults to `/plantuml/png/`, so the server should accept requests on localhost at that specific path.  Note, that only PNG-files are currently recognized."
+    },
+    {
+      "type": "markdown",
+      "id": "9fa3b1ea65b90748",
+      "text": "If the line starts with `'CAPTION` then the following text, after a space until the end of the line, is used as a caption after the generated UML-diagram.  This defaults to an empty caption."
+    },
+    {
+      "type": "html",
+      "id": "ba6f8d8f2ff5982e",
+      "text": "<h3>Other requirements</h3>"
+    },
+    {
+      "type": "paragraph",
+      "id": "6aeac14862cecd8d",
+      "text": "For this plugin to work, it has to have a connection to a PlantUML server.  You can find details of this at [http://plantuml.com/ plantuml.com].  I'd like to advice not to use the public PlantUML's own service, but to run a server of your own.  An easy way to do this is to run a Tomcat or Jetty server that runs the PlantUML server, as described on PlantUML server's [https://github.com/plantuml/plantuml-server Github pages].  A web server, like nginx, helps to guide the traffic from port 80 to the correct server."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About PlantUML Plugin",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "bb8e2bb4439259bb",
+            "text": "Here we describe the purpose of the plugin and include a sample."
+          },
+          {
+            "type": "plantuml",
+            "id": "81341aefab81d046",
+            "text": "This is text in the new plugin. You can *double-click* to edit it too."
+          }
+        ]
+      },
+      "date": 1530531488000,
+      "certificate": "from mkplugin.sh"
+    },
+    {
+      "type": "edit",
+      "id": "81341aefab81d046",
+      "item": {
+        "type": "plantuml",
+        "id": "81341aefab81d046",
+        "text": "'CAPTION Simple example\n@startuml\nclass PlugIn\n\nclass PlantUMLPlugin\n\nPlugin <|-- PlantUMLPlugin\n@enduml"
+      },
+      "date": 1530874772367
+    },
+    {
+      "type": "edit",
+      "id": "bb8e2bb4439259bb",
+      "item": {
+        "type": "paragraph",
+        "id": "bb8e2bb4439259bb",
+        "text": "The PlantUML plugin renders a PlantUML description using a server of your choice.  An optional caption is added after the UML.  This plugin saves the image and tries not to call the server, if the source has not changed."
+      },
+      "date": 1530875028225
+    },
+    {
+      "type": "add",
+      "id": "1385c19a89da9823",
+      "item": {
+        "type": "paragraph",
+        "id": "1385c19a89da9823",
+        "text": "Read more about PlantUML at http://plantuml."
+      },
+      "after": "bb8e2bb4439259bb",
+      "date": 1530875064516
+    },
+    {
+      "type": "edit",
+      "id": "1385c19a89da9823",
+      "item": {
+        "type": "paragraph",
+        "id": "1385c19a89da9823",
+        "text": "Read more about PlantUML at http://plantuml.com/"
+      },
+      "date": 1530875075237
+    },
+    {
+      "type": "add",
+      "id": "e4f952576c5a1cc3",
+      "item": {
+        "type": "paragraph",
+        "id": "e4f952576c5a1cc3",
+        "text": "The source for this"
+      },
+      "after": "1385c19a89da9823",
+      "date": 1530875085592
+    },
+    {
+      "type": "edit",
+      "id": "1385c19a89da9823",
+      "item": {
+        "type": "paragraph",
+        "id": "1385c19a89da9823",
+        "text": "Read more about PlantUML at [http://plantuml.com/]"
+      },
+      "date": 1530875099456
+    },
+    {
+      "type": "edit",
+      "id": "1385c19a89da9823",
+      "item": {
+        "type": "paragraph",
+        "id": "1385c19a89da9823",
+        "text": "Read more about PlantUML at [[http://plantuml.com/]]"
+      },
+      "date": 1530875106451
+    },
+    {
+      "type": "edit",
+      "id": "1385c19a89da9823",
+      "item": {
+        "type": "paragraph",
+        "id": "1385c19a89da9823",
+        "text": "Read more about PlantUML at [[http://plantuml.com/ plantuml.com],"
+      },
+      "date": 1530875131329
+    },
+    {
+      "type": "edit",
+      "id": "1385c19a89da9823",
+      "item": {
+        "type": "paragraph",
+        "id": "1385c19a89da9823",
+        "text": "Read more about PlantUML at [http://plantuml.com/ plantuml.com]."
+      },
+      "date": 1530875138443
+    },
+    {
+      "type": "edit",
+      "id": "e4f952576c5a1cc3",
+      "item": {
+        "type": "paragraph",
+        "id": "e4f952576c5a1cc3",
+        "text": "The source for this plugin is available at [http://github.com github.com]."
+      },
+      "date": 1530875166669
+    },
+    {
+      "type": "edit",
+      "id": "e4f952576c5a1cc3",
+      "item": {
+        "type": "paragraph",
+        "id": "e4f952576c5a1cc3",
+        "text": "The source for this plugin is available at [http://github.com Github]."
+      },
+      "date": 1530875184963
+    },
+    {
+      "type": "edit",
+      "id": "e4f952576c5a1cc3",
+      "item": {
+        "type": "paragraph",
+        "id": "e4f952576c5a1cc3",
+        "text": "See [http://github.com Github] for plugin source."
+      },
+      "date": 1530875230061
+    },
+    {
+      "type": "edit",
+      "id": "81341aefab81d046",
+      "item": {
+        "type": "plantuml",
+        "id": "81341aefab81d046",
+        "text": "'CAPTION Simple example\n@startuml\nclass Plugin\n\nclass PlantUMLPlugin\n\nPlugin <|-- PlantUMLPlugin\n@enduml"
+      },
+      "date": 1530875236419
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "10a82c2bd49114e0"
+      },
+      "id": "10a82c2bd49114e0",
+      "type": "add",
+      "after": "81341aefab81d046",
+      "date": 1530875258330
+    },
+    {
+      "type": "edit",
+      "id": "10a82c2bd49114e0",
+      "item": {
+        "type": "paragraph",
+        "id": "10a82c2bd49114e0",
+        "text": "<h3>Plugin notation"
+      },
+      "date": 1530875293470
+    },
+    {
+      "type": "edit",
+      "id": "10a82c2bd49114e0",
+      "item": {
+        "type": "paragraph",
+        "id": "10a82c2bd49114e0",
+        "text": "<h3>Plugin notation</h3>"
+      },
+      "date": 1530875300682
+    },
+    {
+      "type": "edit",
+      "id": "10a82c2bd49114e0",
+      "item": {
+        "type": "html",
+        "id": "10a82c2bd49114e0",
+        "text": "<h3>Plugin notation</h3>"
+      },
+      "date": 1530875305158
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "77a4e756cde6b853"
+      },
+      "id": "77a4e756cde6b853",
+      "type": "add",
+      "after": "10a82c2bd49114e0",
+      "date": 1530875307161
+    },
+    {
+      "type": "edit",
+      "id": "77a4e756cde6b853",
+      "item": {
+        "type": "paragraph",
+        "id": "77a4e756cde6b853",
+        "text": "This plugin uses the same notation as PlantUML does with two exceptions.  Before the mandatory `@startuml` tag can be lines of comments that guide the plugin."
+      },
+      "date": 1530875644612
+    },
+    {
+      "type": "edit",
+      "id": "77a4e756cde6b853",
+      "item": {
+        "type": "markdown",
+        "id": "77a4e756cde6b853",
+        "text": "This plugin uses the same notation as PlantUML does with two exceptions.  Before the mandatory `@startuml` tag can be lines of comments that guide the plugin."
+      },
+      "date": 1530875648977
+    },
+    {
+      "type": "add",
+      "id": "6dab13a9dbbc974d",
+      "item": {
+        "type": "paragraph",
+        "id": "6dab13a9dbbc974d",
+        "text": "If the line starts with `'HOST` followed by a space character and an URI, that URI is used as the address and prefix of the PlantUML server.  The encoded version of the PlantUML source is concatenated to this URI, and the concatenation has to be a valid URI for the PlantUML server.  This defaults to `/plantuml/png/`, so the server should accept requests on localhost at that specific path.  Note, that only PNG-files are currently recognized."
+      },
+      "after": "77a4e756cde6b853",
+      "date": 1530875652932
+    },
+    {
+      "type": "edit",
+      "id": "6dab13a9dbbc974d",
+      "item": {
+        "type": "markdown",
+        "id": "6dab13a9dbbc974d",
+        "text": "If the line starts with `'HOST` followed by a space character and an URI, that URI is used as the address and prefix of the PlantUML server.  The encoded version of the PlantUML source is concatenated to this URI, and the concatenation has to be a valid URI for the PlantUML server.  This defaults to `/plantuml/png/`, so the server should accept requests on localhost at that specific path.  Note, that only PNG-files are currently recognized."
+      },
+      "date": 1530875653875
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9fa3b1ea65b90748"
+      },
+      "id": "9fa3b1ea65b90748",
+      "type": "add",
+      "after": "6dab13a9dbbc974d",
+      "date": 1530875673585
+    },
+    {
+      "type": "edit",
+      "id": "9fa3b1ea65b90748",
+      "item": {
+        "type": "paragraph",
+        "id": "9fa3b1ea65b90748",
+        "text": "If the line starts with `'CAPTION` then the following text, after a single space character again, is used as a caption under the generated UML-diagram.  This defaults to an empty caption."
+      },
+      "date": 1530875763365
+    },
+    {
+      "type": "edit",
+      "id": "9fa3b1ea65b90748",
+      "item": {
+        "type": "markdown",
+        "id": "9fa3b1ea65b90748",
+        "text": "If the line starts with `'CAPTION` then the following text, after a single space character again, is used as a caption under the generated UML-diagram.  This defaults to an empty caption."
+      },
+      "date": 1530875770772
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ba6f8d8f2ff5982e"
+      },
+      "id": "ba6f8d8f2ff5982e",
+      "type": "add",
+      "after": "9fa3b1ea65b90748",
+      "date": 1530875843507
+    },
+    {
+      "type": "edit",
+      "id": "ba6f8d8f2ff5982e",
+      "item": {
+        "type": "paragraph",
+        "id": "ba6f8d8f2ff5982e",
+        "text": "<h3>Other requirements</h3>"
+      },
+      "date": 1530875856696
+    },
+    {
+      "type": "add",
+      "id": "6aeac14862cecd8d",
+      "item": {
+        "type": "paragraph",
+        "id": "6aeac14862cecd8d",
+        "text": "For this plugin to work, it has to have a connection to a PlantUML server.  You can find details of this at [http://plantuml.com/ plantuml.com].  I'd like to advice not to use the public PlantUML's own service, but to run your own.  An easy way to do this is to run a Tomcat server that runs the PlantUML server, as described on PlantUML's pages.  A web server, like nginx, helps to guide the traffic from port 80 to correct service."
+      },
+      "after": "ba6f8d8f2ff5982e",
+      "date": 1530876045404
+    },
+    {
+      "type": "edit",
+      "id": "ba6f8d8f2ff5982e",
+      "item": {
+        "type": "html",
+        "id": "ba6f8d8f2ff5982e",
+        "text": "<h3>Other requirements</h3>"
+      },
+      "date": 1530876077778
+    },
+    {
+      "type": "edit",
+      "id": "6aeac14862cecd8d",
+      "item": {
+        "type": "paragraph",
+        "id": "6aeac14862cecd8d",
+        "text": "For this plugin to work, it has to have a connection to a PlantUML server.  You can find details of this at [http://plantuml.com/ plantuml.com].  I'd like to advice not to use the public PlantUML's own service, but to run a server of your own.  An easy way to do this is to run a Tomcat server that runs the PlantUML server, as described on PlantUML server's [https://github.com/plantuml/plantuml-server Github pages].  A web server, like nginx, helps to guide the traffic from port 80 to correct service."
+      },
+      "date": 1530876118866
+    },
+    {
+      "type": "edit",
+      "id": "6aeac14862cecd8d",
+      "item": {
+        "type": "paragraph",
+        "id": "6aeac14862cecd8d",
+        "text": "For this plugin to work, it has to have a connection to a PlantUML server.  You can find details of this at [http://plantuml.com/ plantuml.com].  I'd like to advice not to use the public PlantUML's own service, but to run a server of your own.  An easy way to do this is to run a Tomcat or Jetty server that runs the PlantUML server, as described on PlantUML server's [https://github.com/plantuml/plantuml-server Github pages].  A web server, like nginx, helps to guide the traffic from port 80 to correct service."
+      },
+      "date": 1530876133693
+    },
+    {
+      "type": "edit",
+      "id": "6aeac14862cecd8d",
+      "item": {
+        "type": "paragraph",
+        "id": "6aeac14862cecd8d",
+        "text": "For this plugin to work, it has to have a connection to a PlantUML server.  You can find details of this at [http://plantuml.com/ plantuml.com].  I'd like to advice not to use the public PlantUML's own service, but to run a server of your own.  An easy way to do this is to run a Tomcat or Jetty server that runs the PlantUML server, as described on PlantUML server's [https://github.com/plantuml/plantuml-server Github pages].  A web server, like nginx, helps to guide the traffic from port 80 to the correct server."
+      },
+      "date": 1530876191225
+    },
+    {
+      "type": "edit",
+      "id": "6dab13a9dbbc974d",
+      "item": {
+        "type": "markdown",
+        "id": "6dab13a9dbbc974d",
+        "text": "If the line starts with `'HOST` followed by a space and a URI that is used as the address and prefix of the PlantUML server.  The encoded version of the PlantUML source is concatenated to this URI, and the concatenation has to be a valid URI for the PlantUML server.  This defaults to `/plantuml/png/`, so the server should accept requests on localhost at that specific path.  Note, that only PNG-files are currently recognized."
+      },
+      "date": 1530879619285
+    },
+    {
+      "type": "edit",
+      "id": "9fa3b1ea65b90748",
+      "item": {
+        "type": "markdown",
+        "id": "9fa3b1ea65b90748",
+        "text": "If the line starts with `'CAPTION` then the following text, after a space until the end of the line, is used as a caption after the generated UML-diagram.  This defaults to an empty caption."
+      },
+      "date": 1530879664861
+    }
+  ]
+}
