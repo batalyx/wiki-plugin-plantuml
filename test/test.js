@@ -7,8 +7,8 @@
 
   describe('frame plugin', () => {
     describe('expand', () => {
-      it('can make itallic', () => {
-        var result = frame.expand('hello *world*');
+      it('can make italic', () => {
+          var result = plantuml.expand('hello *world*');
         return expect(result).to.be('hello <i>world</i>');
       });
     });
